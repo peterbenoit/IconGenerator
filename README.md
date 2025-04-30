@@ -14,13 +14,14 @@ This script automatically generates various icon files needed for a modern websi
 
 The script creates the following files:
 
--   **favicon-16x16.png** - 16x16 favicon for browsers
--   **favicon-32x32.png** - 32x32 favicon for browsers
--   **apple-touch-icon.png** - 180x180 icon for iOS devices
--   **android-chrome-192x192.png** - 192x192 icon for Android devices
--   **android-chrome-512x512.png** - 512x512 icon for Android devices
--   **mstile-150x150.png** - 150x150 icon for Microsoft tiles
--   **og-image.jpg** - 1200x630 image for social media sharing
+-   **favicon-16x16.png** - 16×16 favicon for browsers
+-   **favicon-32x32.png** - 32×32 favicon for browsers
+-   **favicon.ico** - multi-size ICO favicon for browsers
+-   **apple-touch-icon.png** - 180×180 icon for iOS devices
+-   **android-chrome-192x192.png** - 192×192 icon for Android devices
+-   **android-chrome-512x512.png** - 512×512 icon for Android devices
+-   **mstile-150x150.png** - 150×150 icon for Microsoft tiles
+-   **og-image.jpg** - 1200×630 image for social media sharing
 -   **safari-pinned-tab.svg** - SVG silhouette for Safari pinned tabs
 
 ## Requirements
@@ -35,3 +36,6 @@ The script creates the following files:
 ```bash
 pip install Pillow
 ```
+
+Note: favicon.ico is now generated automatically by this script.
+Consider using realfavicongenerator.net for more advanced manifest/HTML injection.

@@ -60,6 +60,18 @@ def generate_icons(logo_path, output_dir='.'):
         except Exception as e:
             print(f"Error generating {filename}: {e}")
 
+    # Generate favicon.ico (multi-size ICO)
+    try:
+        ico_sizes = [(16, 16), (32, 32), (48, 48)]
+        # Resize source into each size
+        ico_images = [resize_maintain_aspect_ratio(source_img, sz) for sz in ico_sizes]
+        ico_output_path = os.path.join(output_dir, 'favicon.ico')
+        # Save the first image but embed all sizes
+        ico_images[0].save(ico_output_path, format='ICO', sizes=ico_sizes)
+        print(f"Generated: {ico_output_path}")
+    except Exception as e:
+        print(f"Error generating favicon.ico: {e}")
+
     # Generate OG Image (1200x630)
     try:
         # Create a background with orange gradient
