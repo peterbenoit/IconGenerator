@@ -33,8 +33,22 @@ The script creates the following files:
 
 1. Install the required dependencies:
 
+    ```bash
+    pip install Pillow
+    ```
+
+## Usage
+
+Run the script by providing the path to your logo file:
+
 ```bash
-pip install Pillow
+python generate-icons.py path/to/your/logo.png
+```
+
+By default, icons will be generated in the current directory. To specify an output directory:
+
+```bash
+python generate-icons.py path/to/your/logo.png --output-dir output/icons
 ```
 
 Note: favicon.ico is now generated automatically by this script.
